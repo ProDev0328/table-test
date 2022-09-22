@@ -1,0 +1,112 @@
+.loginPage {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginPageWrapper {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 20px;
+}
+.title {
+  color: #333c4d;
+  font-weight: 600;
+  font-size: 25px;
+}
+.subTitle {
+  color: #8e99a8;
+  font-size: 16px;
+  margin-top: 30px;
+  font-weight: 400;
+}
+.loginOptionsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+@media (max-width: 463px) {
+  .loginOptionsWrapper {
+    justify-content: center;
+  }
+}
+@media screen and (max-height: 600px) {
+  .loginPage {
+    height: auto;
+  }
+}
+.or {
+  color: #b1b8c4;
+  font-size: 16px;
+  margin: 15px 0;
+  font-weight: 400;
+}
+.loginFormWrapper .ant-input-affix-wrapper {
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.loginFormWrapper .ant-input-affix-wrapper input {
+  font-size: 14px;
+  padding-left: 5px !important;
+}
+.loginFormWrapper .ant-input-affix-wrapper span span svg {
+  color: #c2c8d1;
+}
+.password {
+  width: 100%;
+}
+.rememberForgetPassword {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+.rememberMe,
+.rememberForgetPassword a {
+  text-decoration: none;
+  color: #b7bdc8;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+.signinBtn {
+  width: 100% !important;
+  text-transform: unset !important;
+  padding: 10px 15px !important;
+  height: auto !important;
+  border-radius: 10px !important;
+  margin-bottom: 25px !important;
+}
+.loginOptionsBtn {
+  text-transform: none !important;
+  font-family: "Poppins", sans-serif !important;
+  background-color: #f9fafb !important;
+  border-color: transparent !important;
+  padding: 10px 25px !important;
+  color: #b1b8c4 !important;
+  border: 0px !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+  margin: 5px 0 !important;
+}
+.loginOptionsBtn span svg {
+  height: 22px;
+  width: 22px;
+}
+.noAccount {
+  margin: 0;
+  color: #b9bfca;
+  font-weight: 400;
+  font-size: 14px;
+}
+.signupRedirectLink a {
+  text-decoration: none;
+  text-decoration: none;
+  margin-left: 5px;
+  color: #1890ff;
+}

@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8f6fb;
+  min-height: calc(100vh - 125px);
+  height: 100%;
+}
+.conversationContainer {
+  width: 100%;
+  padding: 0 32px;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: calc(100vh - 141px);
+}
+@media screen and (max-height: 624px) {
+  .conversationContainer {
+    max-height: calc(100vh - 141px);
+  }
+}
+.userInfoWrapper::-webkit-scrollbar,
+.conversationContainer::-webkit-scrollbar {
+  width: 5px;
+}
+.userInfoWrapper::-webkit-scrollbar-thumb,
+.conversationContainer::-webkit-scrollbar-thumb {
+  background-color: #32323299;
+  border-radius: 50px;
+}
+.userInfoWrapper::-webkit-scrollbar-track,
+.conversationContainer::-webkit-scrollbar-track {
+  background-color: #b4b4b4;
+}
+.userInfoSidebar {
+  width: 312px;
+  min-width: 312px;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+.userInfoWrapper {
+  position: fixed;
+  width: 312px;
+  max-height: calc(100vh - 125px);
+  overflow: auto;
+  padding-right: 32px;
+}
+.detailsCard {
+  margin-top: 25px;
+}

@@ -1,0 +1,97 @@
+/* PastPurchasesCard */
+.cardTitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.headerItemTitle {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(50, 50, 50, 0.6);
+}
+.divider {
+  margin: 4px 0px 8px !important;
+}
+.dividerBottom {
+  margin: 15px 0px 10px !important;
+}
+.loadMore,
+.loadMore a {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(50, 50, 50, 0.51);
+  text-align: center;
+  text-decoration: none;
+}
+/* PurchaseItem */
+.purchaseItemWrapper {
+  margin-bottom: 9px;
+}
+.itemTitle {
+  margin-bottom: 8px;
+}
+.itemDetail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemInfo {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.keys {
+}
+.key {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(50, 50, 50, 0.8);
+  margin-bottom: 4px;
+}
+.details {
+  margin-left: 15px;
+}
+.itemStyle {
+  margin-left: 45px;
+}
+.category {
+  margin-left: 18px;
+}
+.itemStyle,
+.category {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(50, 50, 50, 0.6);
+  margin-bottom: 3px;
+}
+.order {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #3dbd3a;
+  margin-bottom: 3px;
+  margin-left: 42px;
+}
+.itemImage {
+  height: 77px;
+  min-width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.itemImage img {
+  width: 74px;
+  height: 77px;
+  border-radius: 8px;
+}
