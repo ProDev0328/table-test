@@ -55,7 +55,6 @@ const CustomerPage = () => {
   const { inquiries } = useSelector(({ inbox }) => inbox);
   const [key, setKey] = useState('');
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getInquiries());
