@@ -7,15 +7,15 @@ const AuthorizedRoute = () => {
   const location = useLocation();
   console.log("AuthorizedRoute", user);
 
-  if (!window.socket) {
-    window.socket = getSocket();
-    if (!window.socket) {
-      return;
-    }
-    window.socket.on("connect", () => {
-      console.log("connected");
-    });
-  }
+  // if (!window.socket) {
+  //   window.socket = getSocket();
+  //   if (!window.socket) {
+  //     return;
+  //   }
+  //   window.socket.on("connect", () => {
+  //     console.log("connected");
+  //   });
+  // }
 
   return user ? (
     <Outlet />

@@ -28,12 +28,12 @@ const InboxMessageDetailPage = () => {
     scrollToBottom(scrollContainer);
 
     console.log("interaction page => useEffect", window.socket);
-    if (window.socket) {
-      window.socket.removeListener("new_message");
-      window.socket.on("new_message", (sms) => {
-        dispatch(getMessages(userId));
-      });
-    }
+    // if (window.socket) {
+    //   window.socket.removeListener("new_message");
+    //   window.socket.on("new_message", (sms) => {
+    //     dispatch(getMessages(userId));
+    //   });
+    // }
   }, []);
 
   useEffect(() => {

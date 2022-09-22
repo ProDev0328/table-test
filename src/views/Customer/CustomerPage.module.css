@@ -25,3 +25,8 @@
   width: 20px;
   height: 20px;
 }
+.searchContent {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+}

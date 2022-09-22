@@ -36,12 +36,12 @@ const InboxListPage = () => {
   useEffect(() => {
     dispatch(getInquiries());
 
-    if (window.socket) {
-      window.socket.removeListener("new_message");
-      window.socket.on("new_message", (sms) => {
-        dispatch(getInquiries());
-      });
-    }
+    // if (window.socket) {
+    //   window.socket.removeListener("new_message");
+    //   window.socket.on("new_message", (sms) => {
+    //     dispatch(getInquiries());
+    //   });
+    // }
   }, []);
 
   return (
