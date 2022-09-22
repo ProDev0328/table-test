@@ -13,6 +13,7 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import Avatar from "@mui/material/Avatar";
 import Button from "components/Button/Button.js";
 import styles from "./Header.module.css";
+import { People } from "@mui/icons-material";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -35,6 +36,10 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.removeItem("azleUser");
     navigate("/login");
+  };
+
+  const navigateToCustomer = () => {
+    navigate("/customers");
   };
 
   return (
@@ -107,6 +112,12 @@ const Header = () => {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
+      <MenuItem onClick={navigateToCustomer}>
+        <ListItemIcon>
+          <People fontSize="small" />
+        </ListItemIcon>
+        Customer
+      </MenuItem>
         <MenuItem onClick={handleLogout}>
           <ListItemIcon>
             <Logout fontSize="small" />
