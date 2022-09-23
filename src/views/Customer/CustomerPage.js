@@ -1,4 +1,5 @@
 
+import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 
 // Material Dashboard 2 PRO React components
@@ -9,36 +10,41 @@ import MDTypography from "../../components/MDTypography";
 import DataTable from "../../examples/Tables/DataTable";
 // Data
 import dataTableData from "./dataTableData";
+import { getInquiries } from "redux/Reducers/InboxReducer/inboxSlice";
+import { useSelector, useDispatch } from "react-redux";
 
-function DataTables() {
+function CustomerPage() {
+
+  const dispatch = useDispatch();
+  const { inquiries } = useSelector(({ inbox }) => inbox);
+  console.log("inquery--->", inquiries)
+  useEffect(() => {
+    dispatch(getInquiries());
+  }, []);
+  
+  const customerTableData = {
+    columns: [
+      { Header: "first name", accessor: "firstName", width: "20%" },
+      { Header: "last name", accessor: "lastName", width: "25%" },
+      { Header: "phone number", accessor: "number" },
+      { Header: "email", accessor: "email" },
+      { Header: "city", accessor: "city" },
+      { Header: "street", accessor: "street" },
+    ],
+    rows: inquiries
+  }
   return (
-      <MDBox pt={6} pb={3}>
-        {/* <MDBox mb={3}>
-          <Card>
-            <MDBox p={3} lineHeight={1}>
-              <MDTypography variant="h5" fontWeight="medium">
-                Datatable Simple
-              </MDTypography>
-              <MDTypography variant="button" color="text">
-                A lightweight, extendable, dependency-free javascript HTML table plugin.
-              </MDTypography>
-            </MDBox>
-            <DataTable table={dataTableData} />
-          </Card>
-        </MDBox>  */}
+      <MDBox p={5}>
         <Card>
           <MDBox p={3} lineHeight={1}>
             <MDTypography variant="h5" fontWeight="medium">
-              Datatable Search
-            </MDTypography>
-            <MDTypography variant="button" color="text">
-              A lightweight, extendable, dependency-free javascript HTML table plugin.
+              Customer Table
             </MDTypography>
           </MDBox>
-          <DataTable table={dataTableData} canSearch />
+          <DataTable table={customerTableData} canSearch />
         </Card>
       </MDBox>
   );
 }
 
-export default DataTables;
+export default CustomerPage;

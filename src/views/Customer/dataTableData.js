@@ -15,12 +15,12 @@ Coded by www.creative-tim.com
 
 const dataTableData = {
   columns: [
-    { Header: "name", accessor: "name", width: "20%" },
-    { Header: "position", accessor: "position", width: "25%" },
-    { Header: "office", accessor: "office" },
-    { Header: "age", accessor: "age", width: "7%" },
-    { Header: "start date", accessor: "startDate" },
-    { Header: "salary", accessor: "salary" },
+    { Header: "first name", accessor: "firstName", width: "20%" },
+    { Header: "last name", accessor: "lastName", width: "25%" },
+    { Header: "phone number", accessor: "number" },
+    { Header: "email", accessor: "email" },
+    { Header: "city", accessor: "city" },
+    { Header: "street", accessor: "street" },
   ],
 
   rows: [
