@@ -1,8 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { listInquiries, listMessages, sendMessage } from "./actions";
 
-export const getInquiries = createAsyncThunk("inbox/listInquiries", async () =>
-  listInquiries()
+export const getInquiries = createAsyncThunk(
+  "inbox/listInquiries", 
+  async () => listInquiries()
 );
 export const getMessages = createAsyncThunk(
   "inbox/listMessages",

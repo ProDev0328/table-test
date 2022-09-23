@@ -1,6 +1,7 @@
 import LoginPage from "views/Auth/LoginPage/LoginPage";
 import InboxListPage from "views/Inbox/InboxListPage/InboxListPage";
 import CustomerPage from "views/Customer/CustomerPage";
+import CustomerAddPage from "views/Customer/CustomerAdd/index"
 import InboxMessageDetailPage from "views/Inbox/InboxMessageDetailPage/InboxMessageDetailPage";
 
 export const authorizedRoutes = [
@@ -21,6 +22,12 @@ export const authorizedRoutes = [
     key: "customers",
     path: "/customers",
     element: <CustomerPage />,
+  },
+  {
+    title: "Customer Add",
+    key: "customer-add",
+    path: "/customerAdd",
+    element: <CustomerAddPage />,
   },
 ];
 export const routes = [

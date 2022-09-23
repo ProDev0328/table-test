@@ -13,6 +13,7 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import Avatar from "@mui/material/Avatar";
 import Button from "components/Button/Button.js";
 import styles from "./Header.module.css";
+import MDTypography from "components/MDTypography";
 import { People } from "@mui/icons-material";
 
 const Header = () => {
@@ -116,13 +117,17 @@ const Header = () => {
         <ListItemIcon>
           <People fontSize="small" />
         </ListItemIcon>
-        Customer
+        <MDTypography variant="button" color="text">
+          Customer
+        </MDTypography>
       </MenuItem>
         <MenuItem onClick={handleLogout}>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
-          Logout
+          <MDTypography variant="button" color="text">
+            Logout
+          </MDTypography>
         </MenuItem>
       </Menu>
     </div>

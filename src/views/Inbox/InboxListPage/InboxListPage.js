@@ -17,6 +17,7 @@ import styles from "./InboxListPage.module.css";
 const InboxListPage = () => {
   const [value, setValue] = useState(0);
   const { inquiries } = useSelector(({ inbox }) => inbox);
+  const filteredInquiries = inquiries.filter((a) => a.sms.length)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [notification, setNotification] = useState({
@@ -81,7 +82,7 @@ const InboxListPage = () => {
       </div>
       <div className={styles.tabsPanelWrapper}>
         <TabPanel value={value} index={0}>
-          {inquiries.map((message) => (
+          {filteredInquiries.map((message) => (
             <InboxMessageCard
               message={message}
               key={message.id}
